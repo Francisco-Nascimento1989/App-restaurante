@@ -1,0 +1,275 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="titulo"> Pratos </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <h4 class="subtitulo">Entradas</h4>
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.carpaccio=true;this.ceviche=false;this.palmito=false; this.queijos= false; this.salada=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/carpaccio.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b> Carpaccio </b> </ion-label>
+    <span class="preço">R$ 45.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="carpaccio" this.capaccio="false">
+    <ion-item>
+      <img src="assets/imagens/carpaccio.png" alt="">
+    </ion-item>
+    <p class="about"> O tradicional prato europeu cai super bem com rúcula. O parmesão e o azeite de oliva dão o toque final desse corte da alta gastronomia. </p>
+    <span class="preço-about"> R$ 45.00</span>
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item  (click)="this.ceviche=true; this.carpaccio=false; this.palmito=false; this.queijos=false; this.salada=false">
+    <ion-thumbnail slot="start">
+      <img class="imgCard" src ="assets/imagens/ceviche.png" >
+    </ion-thumbnail>
+    <ion-label class="item"> <b> Ceviche </b> </ion-label>
+    <span class="preço"> R$ 45.00</span>
+  </ion-item>
+</ion-card>
+   <ion-list *ngIf="ceviche">
+    <ion-item>
+      <img src="assets/imagens/ceviche.png">
+    </ion-item>
+    <p class="about"> O tradicional prato europeu cai super bem com rúcula. O parmesão e o azeite de oliva dão o toque final desse corte da alta gastronomia. </p>
+    <span class="preço-about"> R$ 45.00</span>
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.palmito=true; this.carpaccio=false; this.ceviche=false; this.queijos=false; this.salada=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/palmito.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b> Palmito de Açai </b> </ion-label>
+    <span class="preço"> R$ 36.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="palmito">
+    <ion-item>
+      <img src="assets/imagens/palmito.png" alt="">
+    </ion-item>
+    <p class="about"> Palmito de açair servido com tomate cereja temperado. Natural ou grelhado </p>
+    <span class="preço-about"> R$ 36.00</span>
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.queijos=true; this.carpaccio=false; this.ceviche=false; this.palmito=false; this.salada=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/queijo.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b>Tábua de Queijos</b> </ion-label>
+    <span class="preço"> R$ 63.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="queijos">
+    <ion-item>
+      <img src="assets/imagens/queijo.png" alt="">
+    </ion-item>
+    <p class="about"> Lascas de quijos selecionados, acompanhados de mel e geleia</p>
+    <span class="preço-about"> R$ 63.00</span>
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.salada=true; this.queijos=false; this.carpaccio=false; this.ceviche=false; this.palmito=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/saladaEntrada.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b>Salada Caesar</b> </ion-label>
+    <span class="preço"> R$ 23.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="salada">
+    <ion-item>
+      <img src="assets/imagens/saladaEntrada.png" alt="">
+    </ion-item>
+    <p class="about">Deliciosa salada crocante com alface americano e incrivel molho caesar</p>
+    <span class="preço-about"> R$ 23.00</span>
+  </ion-list>
+
+                        <h4 class="subtitulo">Prato Principal</h4>
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.picanha=true; this.crostela=false; this.tilapia=false; this.polenta= false; this.frango=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/picanha.png">
+    </ion-thumbnail>
+    <ion-label class="item"> <b> Picanha Uruguai </b> </ion-label>
+    <span class="preço">R$48.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="picanha" this.capaccio="false">
+    <ion-item>
+      <img src="assets/imagens/picanha.png" alt="">
+    </ion-item>
+    <p class="about"> Generoso corte  picanha de altissima qualidade, grelhado com manteiga. Acompanhado de
+      arroz, batata fritas e farofa. </p>
+    <span class="preço-about"> R$ 48.00</span>
+
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.crostela=true ;this.picanha=false; this.tilapia=false; this.polenta= false; this.frango=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/costela-suina.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b> Crostela Suprema </b> </ion-label>
+    <span class="preço">R$ 42.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="crostela">
+    <ion-item>
+      <img src="assets/imagens/costela-suina.png">
+    </ion-item>
+    <p class="about"> Corte especial suino grelhado. Acompanhado de purê de batatas, vinagrete e farofa. </p>
+    <span class="preço-about"> R$ 42.00</span>
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.tilapia=true; this.picanha=false; this.crostela=false; this.polenta= false; this.frango=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/file-tilapia.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b> Tilápia </b> </ion-label>
+    <span class="preço">R$ 39.00 </span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="tilapia">
+    <ion-item>
+      <img src="assets/imagens/file-tilapia.png" alt="">
+    </ion-item>
+    <p class="about"> Delicioso filet de Tilapia selvagem, servido com pimentos, arroz e legumes. </p>
+    <span class="preço-about"> R$ 39.00</span>
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item (click)=" this.polenta=true; this.picanha=false; this.crostela=false; this.tilapia=false; this.frango=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/polenta.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b> Polenta </b> </ion-label>
+    <span class="preço">R$ 28.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="polenta">
+    <ion-item>
+      <img src="assets/imagens/polenta.png" alt="">
+    </ion-item>
+    <p class="about">Polenta italiana cozida no leite de castanha-de-caju, cogumelos frescos salteados no azeite extra virgem e “mostarda de frutas” </p>
+    <span class="preço-about">  R$ 28.00</span>
+  </ion-list>
+
+  <ion-card class="cardapio">
+  <ion-item (click)=" this.frango=true; this.picanha=false; this.crostela=false; this.tilapia=false; this.polenta= false;">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/frango-supremo.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b>Frango</b> </ion-label>
+    <span class="preço"> R$ 45.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="frango">
+    <ion-item>
+      <img src="assets/imagens/frango-supremo.png" alt="">
+    </ion-item>
+    <p class="about">Frango supremo grelhado francês com grão de batata e salsa de fruta e sementes de romã e folha de ervilha de borboleta em prato</p>
+    <span class="preço-about">  R$45.00 </span>
+  </ion-list>
+
+  <h4 class="subtitulo">Sobremesas</h4>
+
+  <ion-card class="cardapio">
+    <ion-item (click)="this.brownie=true; this.choco=false; this.smores=false; this.milkshake= false; this.cinnamon=false">
+      <ion-thumbnail slot="start">
+        <img src="assets/imagens/sobremesas/brownie.png" alt="">
+      </ion-thumbnail>
+      <ion-label class="item"> <b> Brownie </b> </ion-label>
+      <span class="preço">R$ 15.00</span>
+    </ion-item>
+  </ion-card>
+    <ion-list *ngIf="brownie" this.brawnie="false">
+      <ion-item>
+        <img src="assets/imagens/sobremesas/brownie.png" alt="">
+      </ion-item>
+      <p class="about"> Nosso brownie exclusivo e quentinho com sorvete de baunilha e deliciosa calda de chocolate preparada diariamente,Finalizado com chantilly e raspas de chocolate. *Contém nozes ou derivado de nozes. </p>
+      <span class="preço-about"> R$ 15.00</span>
+    </ion-list>
+
+  <ion-card class="cardapio">
+    <ion-item  (click)="this.choco=true; this.brownie=false; this.smores=false; this.milkshake= false; this.cinnamon=false">
+      <ion-thumbnail slot="start">
+        <img class="imgCard" src ="assets/imagens/sobremesas/choco.png" >
+      </ion-thumbnail>
+      <ion-label class="item"> <b> Choco Cinnamon Banoffee </b> </ion-label>
+      <span class="preço"> R$ 18.00</span>
+    </ion-item>
+  </ion-card>
+     <ion-list *ngIf="choco">
+      <ion-item>
+        <img src="assets/imagens/sobremesas/choco.png">
+      </ion-item>
+      <p class="about"> Versão exclusiva da Banoffee no estilo da casa .Base crocante de biscoito Thunder, doce de leite, brigadeiro com canela e finalizado com rodelas de banana, chantilly e canela. </p>
+      <span class="preço-about"> R$ 18.00</span>
+    </ion-list>
+
+  <ion-card class="cardapio">
+    <ion-item (click)="this.smores=true; this.choco=false; this.brownie=false; this.milkshake= false; this.cinnamon=false">
+      <ion-thumbnail slot="start">
+        <img src="assets/imagens/sobremesas/smores.png" alt="">
+      </ion-thumbnail>
+      <ion-label class="item"> <b> S'mores </b> </ion-label>
+      <span class="preço"> R$ 17.00</span>
+    </ion-item>
+  </ion-card>
+    <ion-list *ngIf="smores">
+      <ion-item>
+        <img src="assets/imagens/sobremesas/smores.png" alt="">
+      </ion-item>
+      <p class="about">Uma sobremesa quente, que combina cookies com gotas de chocolate, uma surpreendente pasta cremosa de Kit Kat, marshmallow gratinado, nossa calda de chocolate e pedaços de Kit Kat para finalizar. </p>
+      <span class="preço-about"> R$ 17.00</span>
+    </ion-list>
+
+  <ion-card class="cardapio">
+    <ion-item (click)="this.milkshake=true; this.choco=false; this.smores=false; this.brownie= false; this.cinnamon=false">
+      <ion-thumbnail slot="start">
+        <img src="assets/imagens/sobremesas/milkshake.png" alt="">
+      </ion-thumbnail>
+      <ion-label class="item"> <b>Milkshake</b> </ion-label>
+      <span class="preço"> R$ 12.00</span>
+    </ion-item>
+  </ion-card>
+    <ion-list *ngIf="milkshake">
+      <ion-item>
+        <img src="assets/imagens/sobremesas/milkshake.png" alt="">
+      </ion-item>
+      <p class="about"> Sabor chocolate com cobertura de chantilly. Servido numa charmosa caneca de vidro de 220 ml.</p>
+      <span class="preço-about"> R$ 12.00</span>
+    </ion-list>
+
+  <ion-card class="cardapio">
+    <ion-item (click)="this.cinnamon=true; this.choco=false; this.smores=false; this.milkshake= false; this.brownie= false">
+      <ion-thumbnail slot="start">
+        <img src="assets/imagens/sobremesas/cinnamon.png" alt="">
+      </ion-thumbnail>
+      <ion-label class="item"> <b>Cinnamon</b> </ion-label>
+      <span class="preço"> R$ 18.00</span>
+    </ion-item>
+  </ion-card>
+    <ion-list *ngIf="cinnamon">
+      <ion-item>
+        <img src="assets/imagens/sobremesas/cinnamon.png" alt="">
+      </ion-item>
+      <p class="about">A sobremesa que nossos waiters adoram explicar. Contém nozes ou derivado de nozes.</p>
+      <span class="preço-about"> R$ 18.00</span>
+    </ion-list>
+
+
+
+
+</ion-content>

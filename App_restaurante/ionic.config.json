@@ -1,0 +1,7 @@
+{
+  "name": "doaçao",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

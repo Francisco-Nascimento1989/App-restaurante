@@ -1,0 +1,98 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="titulo"> Lanches </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.Xsalada=true; this.Xbacon=false; this.hotDog=false; this.beirute= false; this.superBurrito=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/lanches/Xsalada.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b> X Salada </b> </ion-label>
+    <span class="preço">R$ 20.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="Xsalada" this.Xsalada="false">
+    <ion-item>
+      <img src="assets/imagens/lanches/Xsalada.png" alt="">
+    </ion-item>
+    <p class="about"> Pão, 150gr Hambúrguer Caseiro, Maionese Caseira, Ketchup, Cheddar ou Catupiry, Mussarela, Alface e Tomate. </p>
+    <span class="preço-about"> R$ 20.00</span>
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item  (click)="this.Xbacon=true; this.Xsalada=false; this.hotDog=false; this.beirute= false; this.superBurrito=false">
+    <ion-thumbnail slot="start">
+      <img class="imgCard" src ="assets/imagens/lanches/Xbacon.png" >
+    </ion-thumbnail>
+    <ion-label class="item"> <b> X Bacon </b> </ion-label>
+    <span class="preço"> R$ 23.00</span>
+  </ion-item>
+</ion-card>
+   <ion-list *ngIf="Xbacon" this.Xbacon="false">
+    <ion-item>
+      <img src="assets/imagens/lanches/Xbacon.png">
+    </ion-item>
+    <p class="about"> Pão, 150gr Hambúrguer Caseiro, mussarela, Ketchup, Cheddar ou Catupiry, Maionese Caseira, Bacon, Alface e Tomate. </p>
+    <span class="preço-about"> R$ 23.00</span>
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.hotDog=true; this.Xbacon=false; this.Xsalada=false; this.beirute= false; this.superBurrito=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/lanches/hotDog.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b> Super Hot Dog </b> </ion-label>
+    <span class="preço"> R$ 21.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="hotDog" this.hotDog="false">
+    <ion-item>
+      <img src="assets/imagens/lanches/hotDog.png" alt="">
+    </ion-item>
+    <p class="about">Pão, Purê, Alface, 2x Salsicha, Maionese Caseira, Bacon, Calabresa, Cheddar ou Catupiry, Batata Palha, vinagrete e Ketchup. </p>
+    <span class="preço-about"> R$ 21.00</span>
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.beirute=true; this.Xbacon=false; this.hotDog=false; this.Xsalada= false; this.superBurrito=false">
+    <ion-thumbnail slot="start">
+      <img src="assets/imagens/lanches/beirute.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b>Beirute Especial</b> </ion-label>
+    <span class="preço"> R$ 32.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="beirute" this.beirute="false">
+    <ion-item>
+      <img src="assets/imagens/lanches/beirute.png" alt="">
+    </ion-item>
+    <p class="about"> Pão sírio, rosbife, presunto, queijo, bacon, ovo, alface, tomate e maionese.</p>
+    <span class="preço-about"> R$ 32.00</span>
+  </ion-list>
+
+<ion-card class="cardapio">
+  <ion-item (click)="this.superBurrito=true; this.Xbacon=false; this.hotDog=false; this.beirute= false; this.Xsalada=false">
+    <ion-thumbnail slot="start">
+     <img src="assets/imagens/lanches/burrito.png" alt="">
+    </ion-thumbnail>
+    <ion-label class="item"> <b>superBurrito</b> </ion-label>
+    <span class="preço"> R$ 25.00</span>
+  </ion-item>
+</ion-card>
+  <ion-list *ngIf="superBurrito" this.superBurrito="false">
+    <ion-item>
+      <img src="assets/imagens/lanches/burrito.png" alt="">
+    </ion-item>
+    <p class="about"> Burrito leva ingredientes saborosos e individuais, como frango grelhado com carne branca, rancho cremoso, queijo cheddar e Potato Olés. Em seguida, os colocamos em uma tortilha e a grelhamos para derreter todos os sabores para criar uma refeição crocante, cremosa e inesquecível.</p>
+    <span class="preço-about"> R$ 25.00</span>
+  </ion-list>
+
+
+
+</ion-content>

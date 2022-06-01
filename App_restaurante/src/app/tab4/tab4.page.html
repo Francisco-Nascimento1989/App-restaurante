@@ -1,0 +1,172 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titulo">Bebidas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<h4 class="subtitulo"> Drinks</h4>
+  <ion-card class="cardapio">
+    <ion-item (click)="this.alabamaSlammer=true; this.whiteRussian=false; this.godfather=false; this.negroni= false; this. singaporeSling=false">
+      <ion-thumbnail slot="start">
+        <img src="assets/imagens/bebidas/alabama.png" alt="">
+      </ion-thumbnail>
+      <ion-label class="item"> <b> Alabama Slammer </b> </ion-label>
+      <span class="preço">R$ 20.00</span>
+    </ion-item>
+  </ion-card>
+    <ion-list *ngIf="alabamaSlammer" this.alabamaSlammer="false">
+      <ion-item>
+        <img src="assets/imagens/bebidas/alabama.png" alt="">
+      </ion-item>
+      <p class="about"> Copo highball com gelo;
+        50 ml gin;
+        15 ml Amaretto;
+        15 ml Southern Comfort (licor à base de whisky);
+        Suco de laranja. </p>
+      <span class="preço-about"> R$ 20.00</span>
+    </ion-list>
+
+  <ion-card class="cardapio">
+    <ion-item  (click)="this.whiteRussian=true; this.alabamaSlammer=false; this.godfather=false; this.negroni= false; this. singaporeSling=false">
+      <ion-thumbnail slot="start">
+        <img class="imgCard" src ="assets/imagens/bebidas/white-russian.png" >
+      </ion-thumbnail>
+      <ion-label class="item"> <b> White Russian </b> </ion-label>
+      <span class="preço"> R$ 23.00</span>
+    </ion-item>
+  </ion-card>
+     <ion-list *ngIf="whiteRussian" this.whiteRussian="false">
+      <ion-item>
+        <img src="assets/imagens/bebidas/white-russian.png">
+      </ion-item>
+      <p class="about"> Copo highball com gelo;
+        50 ml vodka;
+        30 ml Kahlua (licor à base de café);
+        Leite.</p>
+      <span class="preço-about"> R$ 23.00</span>
+    </ion-list>
+
+  <ion-card class="cardapio">
+    <ion-item (click)="this.godfather=true; this.whiteRussian=false; this.alabamaSlammer=false; this.negroni= false; this. singaporeSling=false">
+      <ion-thumbnail slot="start">
+        <img src="assets/imagens/bebidas/godfather.png" alt="">
+      </ion-thumbnail>
+      <ion-label class="item"> <b> Godfather </b> </ion-label>
+      <span class="preço"> R$ 21.00</span>
+    </ion-item>
+  </ion-card>
+    <ion-list *ngIf="godfather" this.godfather="false">
+      <ion-item>
+        <img src="assets/imagens/bebidas/godfather.png" alt="">
+      </ion-item>
+      <p class="about">Copo de caipirinha com gelo;
+        50 ml whisky escocês;
+        30 ml Amaretto.</p>
+      <span class="preço-about"> R$ 21.00</span>
+    </ion-list>
+
+  <ion-card class="cardapio">
+    <ion-item (click)="this.negroni=true; this.whiteRussian=false; this.godfather=false; this.alabamaSlammer= false; this. singaporeSling=false">
+      <ion-thumbnail slot="start">
+        <img src="assets/imagens/bebidas/negroni.png" alt="">
+      </ion-thumbnail>
+      <ion-label class="item"> <b>Negroni</b> </ion-label>
+      <span class="preço"> R$ 32.00</span>
+    </ion-item>
+  </ion-card>
+    <ion-list *ngIf="negroni" this.negroni="false">
+      <ion-item>
+        <img src="assets/imagens/bebidas/negroni.png" alt="">
+      </ion-item>
+      <p class="about"> 30 ml gin;
+        30 ml Vermouth;
+        30 ml Campari;
+        Despejar em copo com gelo e mexer;
+        Casca de laranja torcida.</p>
+      <span class="preço-about"> R$ 32.00</span>
+    </ion-list>
+
+  <ion-card class="cardapio">
+    <ion-item (click)="this.singaporeSling=true; this.whiteRussian=false; this.godfather=false; this.negroni= false; this. alabamaSlammer=false">
+      <ion-thumbnail slot="start">
+       <img src="assets/imagens/bebidas/singapore.png" alt="">
+      </ion-thumbnail>
+      <ion-label class="item"> <b>Singapore Sling</b> </ion-label>
+      <span class="preço"> R$ 25.00</span>
+    </ion-item>
+  </ion-card>
+    <ion-list *ngIf="singaporeSling" this.singaporeSling="false">
+      <ion-item>
+        <img src="assets/imagens/bebidas/singapore.png" alt="">
+      </ion-item>
+      <p class="about"> 30 ml gin seco;
+        15 ml Cherry Heering;
+        15 ml benedictine;
+        30 ml suco de limão
+        60 ml água com gás.
+        1 pitada angostura;
+        Decorado com abacaxi.</p>
+      <span class="preço-about"> R$ 25.00</span>
+    </ion-list>
+
+
+
+
+    <h4 class="subtitulo">Cervejas</h4>
+
+      <ion-list>
+        <ion-item class="bier">
+          <ion-label>Bueweiser </ion-label>
+          <ion-label class="bierPreço"> R$ 10.00 </ion-label>
+        </ion-item>
+
+        <ion-item class="bier">
+          <ion-label>Coruja Ipa </ion-label>
+          <ion-label class="bierPreço"> R$ 15.00 </ion-label>
+        </ion-item>
+
+        <ion-item class="bier">
+          <ion-label> Wals Dubbel </ion-label>
+          <ion-label class="bierPreço"> R$ 18.00 </ion-label>
+        </ion-item>
+      </ion-list>
+
+
+      <h4 class="subtitulo"> Águas e sucos</h4>
+
+      <ion-list >
+        <ion-item class="Bsaudavel">
+          <ion-label> Água San Pellegrino </ion-label>
+          <ion-label class="Bpreço"> R$ 10.00</ion-label>
+        </ion-item>
+
+        <ion-item class="Bsaudavel">
+          <ion-label> Água Perrier  </ion-label>
+        <ion-label class="Bpreço"> R$ 12.00 </ion-label>
+        </ion-item>
+
+        <ion-item class="Bsaudavel">
+          <ion-label> Água Minalba </ion-label>
+          <ion-label class="Bpreço">  R$ 3.00 </ion-label>
+        </ion-item>
+      </ion-list>
+
+
+
+    <ion-item class="vinhos"> Fale com um de nossos colaboradores para saber mais da nossa carta de vinho </ion-item>
+
+
+      <img src="assets/imagens/bebidas/vinhos.png">
+
+
+
+
+
+
+
+
+
+
+</ion-content>

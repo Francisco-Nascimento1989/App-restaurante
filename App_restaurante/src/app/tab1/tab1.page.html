@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="titulo"> Império Dos Fomentos </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="conteudo">
+    <img class="img-item" src="assets/imagens/imagem1.png" alt="Imagem de Solidariedade">
+
+    <p> Nossa missão é proporcianar a si, experiências gastronômicas jamais vividas 😋 </p>
+
+    <img src="assets/imagens/Nossorestaurante.png" alt="">
+
+    <ion-card>
+      <ion-item (click)="this.pratoDia = true">
+        <ion-thumbnail slot="start">
+          <img class="thumbnailtab1" src="assets/imagens/pratoDoDia3.png">
+        </ion-thumbnail>
+        <ion-label> Mais rápido e económico</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-list class="pratoDia" *ngIf="pratoDia" this.pratoDia= false>
+      <ion-item >
+       <p> Já pensou em chagar no restaurante e não ter que ficar um quarto de hora
+        à espera que sua refeição fique pronta?
+        Embora sejamos rigorosos com o objetivo de fazer tudo no menor tempo possivel, fomos além
+        e preparamos para si, uma modalida de refeições rápidas e por um preço mínimo.
+      Isso mesmo, de segunda a sexta terá sempre opções de um combo que incui: <br>
+      1 Bebida <br>
+      1 Entrada <br>
+      1 Prato Principal <br>
+      1 Sobremesa <br> <br>
+       <ion-item class="promoçao"> Tudo isso por apenas R$ 18.00</ion-item>
+
+    </p>
+
+      </ion-item>
+
+      <img class="dia" src="assets/imagens/pratoDia/pratoDia1.png" alt="">
+      <img class="dia" src="assets/imagens/pratoDia/pratoDia2.png" alt="">
+      <img class="dia" src="assets/imagens/pratoDia/pratoDia3.png" alt="">
+      <img class="dia" src="assets/imagens/pratoDia/pratoDia4.png" alt="">
+
+      <ion-button (click)="this.pratoDia = false" > Fechar </ion-button>
+
+    </ion-list>
+
+
+  </div>
+
+
+
+</ion-content>
+
